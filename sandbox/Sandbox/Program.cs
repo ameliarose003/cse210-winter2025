@@ -1,42 +1,35 @@
 using System;
+using System.IO.Compression;
+using System.Numerics;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // adj = adjective
-        string adj = GetAdjective();
-        string noun = GetNoun();
-        Console.WriteLine($"I looked out the window and saw a {adj} {noun}!");
+        Movie favoriteMovie = new Movie();
+        favoriteMovie._title = "Star Wars";
+        favoriteMovie._year = 1977;
+        favoriteMovie._runtime = 150;
+        favoriteMovie._rating = "PG";
 
+        Movie otherMovie = new Movie();
+        otherMovie._rating = "PG-13";
+        otherMovie._runtime = 162;
+        otherMovie._year = 2009;
+        otherMovie._title = "Avatar";
+
+        favoriteMovie.Display();
+        otherMovie.Display();
+        // Console.WriteLine(favoriteMovie._title);
+        // Console.WriteLine();
+
+        // DisplayMovieName(favoriteMovie);
+        // DisplayMovieName(otherMovie);
     }
 
-    static string GetAdjective()
+    static void DisplayMovieName(Movie aMovie)
     {
-        string userAdj = "";
-        List<string> adjectives;
-        adjectives = new List<string>();
-        do
-        {
-            Console.Write("Please enter an adjective, enter 'no' to end: ");
-            userAdj = Console.ReadLine();
-            if (userAdj != "no")
-            {
-                adjectives.Add(userAdj);
-            }
-        }
-        while (userAdj != "no".ToLower());
-        Random randomGenerator = new Random();
-        int index = randomGenerator.Next(adjectives.Count);
-        string RandomAdj = adjectives[index];
-        return RandomAdj;
-
+        Console.WriteLine($"{aMovie._title} - {aMovie._year}");
     }
 
-    static string GetNoun()
-    {
-        Console.Write("Please enter a noun: ");
-        string userNoun = Console.ReadLine();
-        return userNoun;
-    }
 }
