@@ -9,8 +9,8 @@ class Resume
     {
         Console.WriteLine($"Name: {_name}");
     }
-    // public void DisplayJobs(string job)
-    // {
-    //     Console.WriteLine($"Job Title: {job}");
-    // }
+    public void Display()
+    {
+        Console.WriteLine($"Job Title: {_jobs}");
+    }
 }
