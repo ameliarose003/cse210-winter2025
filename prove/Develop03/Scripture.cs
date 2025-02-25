@@ -51,7 +51,9 @@ class Scripture
     public bool IsAllHidden()
     {
         string[] words = _verse.Split(' ');
-        // Check to see if all words are hidden and end the 
+        // Check to see if all words are hidden and replace it with _
+        // I used this because it is similar to javascript lambda functions that are embedded. 
+        // It made it easier for me to understand because I have been studying a lot of javascript.
         return words.All(word => word.All(c => c == '_'));
     }
 
