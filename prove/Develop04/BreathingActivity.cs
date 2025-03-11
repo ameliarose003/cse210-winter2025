@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Threading;
 public class BreathingActivity : Activity
 {
-    int BREATHE = 4;
+    private const int BREATHE = 4;
     // int HOLDBREATHE = 3;
     public BreathingActivity(string startMsg, string name, string time) : base(startMsg, name, time)
     {
@@ -14,6 +14,8 @@ public class BreathingActivity : Activity
 
     public void Run()
     {
+        Console.Clear();
+        DisplayMessage();
         // Console.WriteLine("This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.");
         // Console.Write("How long in seconds would you like to do this breathing activity?");
         string numberString = Console.ReadLine();

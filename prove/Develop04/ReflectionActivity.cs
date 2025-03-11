@@ -42,6 +42,8 @@ public class ReflectionActivity : Activity
 
     public void Run()
     {
+        Console.Clear();
+        DisplayMessage();
         string time = Console.ReadLine();
         int totalTime = 0;
 

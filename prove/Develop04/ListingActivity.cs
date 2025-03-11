@@ -45,6 +45,8 @@ public class ListingActivity : Activity
 
     public void Run()
     {
+        Console.Clear();
+        DisplayMessage();
         string time = Console.ReadLine();
         int totalTime = 0;
         // int timeCount = 0;

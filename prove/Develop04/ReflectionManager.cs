@@ -14,37 +14,31 @@ public class ReflectionManager()
             choice = Console.ReadLine();
             if (choice == "1" || choice == "Breathing Activity")
             {
-                Console.Clear();
-                breather.DisplayMessage();
                 breather.Run();
-                Thread.Sleep(1000);
                 breather.ShowEnding();
-                Thread.Sleep(1000);
 
             }
-            if (choice == "2" || choice == "Listing Activity")
+            else if (choice == "2" || choice == "Listing Activity")
             {
-                Console.Clear();
-                listing.DisplayMessage();
                 listing.Run();
-                Thread.Sleep(1000);
                 listing.ShowEnding();
-                Thread.Sleep(1000);
 
 
             }
-            if (choice == "3" || choice == "Reflection Activity")
+            else if (choice == "3" || choice == "Reflection Activity")
             {
-                Console.Clear();
-                reflection.DisplayMessage();
                 reflection.Run();
-                Thread.Sleep(1000);
                 reflection.ShowEnding();
-                Thread.Sleep(1000);
-
+            }
+            else if (choice == "4")
+            {
+                Console.WriteLine("GoodBye!");
 
             }
-
+            else
+            {
+                Console.WriteLine("I didn't quite get that.....");
+            }
 
         } while (choice != "quit" && choice != "4");
     }

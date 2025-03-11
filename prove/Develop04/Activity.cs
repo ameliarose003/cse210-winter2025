@@ -2,7 +2,8 @@ public class Activity
 {
     private string _startMsg;
     private string _name;
-    public string _time;
+    private string _time;
+
 
     public Activity(string startMsg, string name, string time)
     {
@@ -11,11 +12,12 @@ public class Activity
         _time = time;
     }
 
-    public void DisplayMessage()
+    protected void DisplayMessage()
     {
         Console.WriteLine(_name);
         Console.WriteLine(_startMsg);
         Console.Write(_time);
+        // Console.WriteLine($"")
     }
     public void Animation(int durationSeconds)
     {
@@ -141,8 +143,11 @@ public class Activity
 
     public void ShowEnding()
     {
+        Thread.Sleep(1000);
         Console.WriteLine();
         Console.WriteLine("Thank you for using The Calmist Meditation for this activity");
         Console.WriteLine();
+        Thread.Sleep(1000);
+
     }
 }
